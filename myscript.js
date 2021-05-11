@@ -1,9 +1,15 @@
 var myImage=document.getElementById("image")
-myImage.onclick = function() {
+var count=0
+function changeImage() {
   let mySrc = myImage.getAttribute('src');
-  if(mySrc === 'guduri.jpeg') {
-    myImage.setAttribute('src','guduriphoto.jpg');
-  } else {
-    myImage.setAttribute('src','guduri.jpeg');
+  var photos=['guduri.jpeg','guduriphoto.jpg']
+  if (count==photos.length) {
+    count=0
+  }
+  else {
+     myImage.setAttribute('src',photos[count]);
+     count +=1
   }
 }
+
+setInterval("changeImage()",1500)
