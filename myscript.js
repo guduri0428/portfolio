@@ -2,7 +2,7 @@ var myImage=document.getElementById("image")
 var count=0
 function changeImage() {
   let mySrc = myImage.getAttribute('src');
-  var photos=['guduri.jpeg','guduriphoto.jpg']
+  var photos=['guduri.jpeg','guduri2.jpg','guduri3.jpeg','guduri4.jpeg']
   if (count==photos.length) {
     count=0
   }
